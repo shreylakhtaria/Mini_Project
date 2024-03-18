@@ -13,7 +13,7 @@ using namespace std;
 
 class contacts{
 string name;
-int contact;
+long long contact;
 string e_mail;
 public:
     contacts(){
@@ -29,7 +29,7 @@ public:
     }
 
     void sort(){
-        
+
     }
 };
 
