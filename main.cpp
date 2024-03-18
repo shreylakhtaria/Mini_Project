@@ -8,31 +8,24 @@ An address book project.
 
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 using namespace std;
 
-class contacts{
+struct contacts{
 string name;
-long long contact;
+long long contact_no;
 string e_mail;
-public:
-    contacts(){
-
-    }
-
-    void output(){
-
-    }
-
-    void search(){
-
-    }
-
-    void sort(){
-
-    }
 };
+
+void search() {
+
+}
+
+void sort() {
+
+}
 
 int main(){
     return 0;
-}
+};
