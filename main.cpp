@@ -75,20 +75,68 @@ int main()
 {
     Cipher_numeric Cipher_numeric;
     long long num;
-    string string;
+    int choice;
 
 
-    // // Input the number to encrypt
-    // cout << "Enter the number to encrypt: ";
-    // cin >> num;
+    do
+    {
 
-    // // Encrypt the number
-    // long long encryptedNum = Cipher_numeric.encrypt(num);
-    // cout << "Encrypted number: " << encryptedNum << endl;
+    cout << "Welcome To  Encryption/decryption : " << endl;
+    cout << "1: Encryption: " << endl; 
+    cout << "2: decryption: "  << endl;
+    cout << "3: exit: " << endl;
+    cout << "Exit:" << endl;
 
-    // // Decrypt the number
-    // long long decryptedNum = Cipher_numeric.decrypt(encryptedNum);
-    // cout << "Decrypted number: " << decryptedNum << endl;
+    cout << "Enter the choice " << endl;
+    cin >> choice ;
 
-    return 0;
+    switch (choice)
+    {
+    case 1:
+    {
+        cout >> "enter the number:" >> endl;
+        cin >> num;
+        long long encryptedNum = Cipher_numeric.encrypt(num);
+        cout << "Encrypted number: " << encryptedNum << endl;
+        break;
+
+    }
+
+    case 2:
+    {
+        cout >> "enter the number:" >> endl;
+        cin >> num;
+        long long decryptedNum = Cipher_numeric.decrypt(num);
+        cout << "Decrypted number: " << decryptedNum << endl;
+        break;
+    }
+
+    case 3:
+    {
+        cout << "Exiting program..." << endl;
+        return 0;
+
+    }
+
+    default:
+        cout << "Invalid choice! Exiting program..." << endl;
+        return 1;
+    }
+    } while(choice != 3);
+    
+
+
+        // // Input the number to encrypt
+        // cout << "Enter the number to encrypt: ";
+        // cin >> num;
+
+        // // // Encrypt the number
+        // long long encryptedNum = Cipher_numeric.encrypt(num);
+        // cout << "Encrypted number: " << encryptedNum << endl;
+
+        // // Decrypt the number
+        // long long decryptedNum = Cipher_numeric.decrypt(encryptedNum);
+        // cout << "Decrypted number: " << decryptedNum << endl;
+
+        return 0;
 }
