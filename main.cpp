@@ -1,4 +1,4 @@
-/*This project was created by Prince Lad, Shrey Lakhataria, Dhariya Kanabar*/
+/*This project was created by  Dhariya Kanabar_23CS032 , Prince Lad_23CS037, Shrey Lakhataria_23CS039*/
 
 /*
 
@@ -17,7 +17,41 @@
 #include <unordered_map>
 using namespace std;
 
-class Cipher_numeric
+class ROT_13
+{
+
+private:
+    unordered_map<long long, long long> substitutionCipher;
+    unordered_map<long long, long long> reverseCipher;
+
+public:
+    
+    ROT_13()
+    {
+
+        for (long long i = 0 ; i < 10 ; i++)
+        {
+
+            long long encrypted = (i + 13) % 10; // ROT13 shift
+            substitutionCipher[i] = encrypted;
+            reverseCipher[encrypted] = i;
+        }
+
+        long long encrypt (long long num)
+        {
+            string numstr = to_string(num); // change int to string 
+            string eccryptednumstr = "";
+            for (char digit : numstr)
+            {
+                eccryptednumstr += to_string(substitutionCipherp[digit - '0']);
+
+            }
+            return stoll;
+        }
+      
+
+};
+class Cipher_numeric 
 {
 private:
     unordered_map<long long, long long> substitutionCipher;
@@ -82,8 +116,8 @@ int main()
     {
 
     cout << "Welcome To  Encryption/decryption : " << endl;
-    cout << "1: Encryption(Substituion cipher): " << endl;
-    cout << "2: decryption(Substituion cipher): " << endl;
+    cout << "1: Encryption_(Substituion cipher): " << endl;
+    cout << "2: decryption_(Substituion cipher): " << endl;
     cout << "3: exit: " << endl;
     cout << "Exit:" << endl;
 
