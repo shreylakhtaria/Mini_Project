@@ -1,3 +1,18 @@
+/*This project was created by Prince Lad, Shrey Lakhataria, Dhariya Kanabar*/
+
+/*
+
+=--------------------------------------------------------= PROJECT DESCRIPTION =--------------------------------------------------------=
+
+                                                          Encryption/decryption
+
+                                               1. User chooses either encyption or decryption.
+                                               2.`User enters the information.
+                                               3. Encryption or decryption is carried out.
+                                               4. Output is showed.
+
+*/
+
 #include <iostream>
 #include <unordered_map>
 using namespace std;
