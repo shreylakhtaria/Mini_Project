@@ -82,8 +82,8 @@ int main()
     {
 
     cout << "Welcome To  Encryption/decryption : " << endl;
-    cout << "1: Encryption: " << endl; 
-    cout << "2: decryption: "  << endl;
+    cout << "1: Encryption(Substituion cipher): " << endl;
+    cout << "2: decryption(Substituion cipher): " << endl;
     cout << "3: exit: " << endl;
     cout << "Exit:" << endl;
 
@@ -94,7 +94,7 @@ int main()
     {
     case 1:
     {
-        cout >> "enter the number:" >> endl;
+        cout << "enter the number:" << endl;
         cin >> num;
         long long encryptedNum = Cipher_numeric.encrypt(num);
         cout << "Encrypted number: " << encryptedNum << endl;
@@ -104,7 +104,7 @@ int main()
 
     case 2:
     {
-        cout >> "enter the number:" >> endl;
+        cout << "enter the number:" << endl;
         cin >> num;
         long long decryptedNum = Cipher_numeric.decrypt(num);
         cout << "Decrypted number: " << decryptedNum << endl;
