@@ -77,6 +77,7 @@ int main()
     long long num;
     string string;
 
+
     // // Input the number to encrypt
     // cout << "Enter the number to encrypt: ";
     // cin >> num;
