@@ -12,45 +12,55 @@
                                                4. Output is showed.
 
 */
-
+ 
 #include <iostream>
 #include <unordered_map>
 using namespace std;
 
-class ROT_13
+class ROT13_numeric
 {
-
 private:
     unordered_map<long long, long long> substitutionCipher;
     unordered_map<long long, long long> reverseCipher;
 
 public:
-    
-    ROT_13()
+    // Constructor to initialize the substitution cipher mapping
+    ROT13_numeric()
     {
-
-        for (long long i = 0 ; i < 10 ; i++)
+        for (long long i = 0; i < 10; ++i)
         {
-
             long long encrypted = (i + 13) % 10; // ROT13 shift
             substitutionCipher[i] = encrypted;
             reverseCipher[encrypted] = i;
         }
+    }
 
-        long long encrypt (long long num)
+    // Function to encrypt a number using ROT13 (Numeric) cipher
+    long long encrypt(long long num)
+    {
+        string numStr = to_string(num);
+        string encryptedNumStr = "";
+        for (char digit : numStr) // Ranged Loop.
         {
-            string numstr = to_string(num); // change int to string 
-            string eccryptednumstr = "";
-            for (char digit : numstr)
-            {
-                eccryptednumstr += to_string(substitutionCipherp[digit - '0']);
-
-            }
-            return stoll;
+            encryptedNumStr += to_string(substitutionCipher[digit - '0']);
         }
-      
+        return stoll(encryptedNumStr); // stoll is string to ll.
+    }
 
+    // Function to decrypt a number using ROT13 (Numeric) cipher
+    long long decrypt(long long num)
+    {
+        string numStr = to_string(num);
+        string decryptedNumStr = "";
+        for (char digit : numStr) // Ranged Loop.
+        {
+            decryptedNumStr += to_string(reverseCipher[digit - '0']);
+        }
+        return stoll(decryptedNumStr); // stoll is string to ll.
+    }
 };
+
+
 class Cipher_numeric 
 {
 private:
