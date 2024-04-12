@@ -14,5 +14,4 @@ Here're some of the project's best features:
 *   Input: Users are prompted to enter the numerical data they want to encrypt or decrypt.
 *   Encryption/Decryption: Based on the user's choice the program performs the encryption or decryption operation using either substitution cipher or ROT13 cipher.
 *   Output: The result of the encryption or decryption operation is displayed to the user.
-
-*   
+  
