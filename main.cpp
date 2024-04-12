@@ -56,7 +56,7 @@ public:
         {
             decryptedNumStr += to_string(reverseCipher[digit - '0']);
         }
-        return stoll(decryptedNumStr); // stoll is string to ll.
+        return stoll(decryptedNumStr); // stoll is string to long long.
     }
 };
 
@@ -118,6 +118,7 @@ public:
 int main()
 {
     Cipher_numeric Cipher_numeric;
+    ROT13_numeric rot13;
     long long num;
     int choice;
 
@@ -125,11 +126,14 @@ int main()
     do
     {
 
-    cout << "Welcome To  Encryption/decryption : " << endl;
+    cout << "Welcome To  Encryption/decryption: " << endl;
+    cout << "*****************************************************************************" << endl;
     cout << "1: Encryption_(Substituion cipher): " << endl;
     cout << "2: decryption_(Substituion cipher): " << endl;
-    cout << "3: exit: " << endl;
-    cout << "Exit:" << endl;
+    cout << "3: Encryption_(ROT_13 cipher): "      << endl;
+    cout << "4: Decryption_(ROT_13 cipher)"        << endl;
+    cout << "5: exit: "                            << endl;
+
 
     cout << "Enter the choice " << endl;
     cin >> choice ;
@@ -155,7 +159,25 @@ int main()
         break;
     }
 
-    case 3:
+    
+    case 3: 
+    {
+        cout << "Enter the number: " << endl;
+        cin >> num;
+        long long encryptedNum = rot13.encrypt(num);
+        cout << "Encrypted number: " <<  encryptedNum << endl;
+        break;
+    }
+
+    case 4:
+    {
+        cout << "enter the number: " << endl;
+        cin >> num;
+        long long decrytednum = rot13.decrypt(num);
+        cout << "Decrypted number: " << decrytednum << endl;
+        break;
+    }
+    case 5:
     {
         cout << "Exiting program..." << endl;
         return 0;
@@ -166,21 +188,10 @@ int main()
         cout << "Invalid choice! Exiting program..." << endl;
         return 1;
     }
-    } while(choice != 3);
-    
+    } while(choice != 5);
 
 
-        // // Input the number to encrypt
-        // cout << "Enter the number to encrypt: ";
-        // cin >> num;
 
-        // // // Encrypt the number
-        // long long encryptedNum = Cipher_numeric.encrypt(num);
-        // cout << "Encrypted number: " << encryptedNum << endl;
 
-        // // Decrypt the number
-        // long long decryptedNum = Cipher_numeric.decrypt(encryptedNum);
-        // cout << "Decrypted number: " << decryptedNum << endl;
-
-        return 0;
+    return 0;
 }
