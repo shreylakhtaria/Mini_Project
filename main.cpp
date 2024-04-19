@@ -129,17 +129,19 @@ public:
 int mainMenu() {
 
     int choice;
-
-    cout << "Welcome To  Encryption/decryption: " << endl;
-    cout << "*****************************************************************************" << endl;
+    cout << "------------------------------------------------------------------------------------------------"<<endl;
+    cout << "------------------------------Welcome To  Encryption/decryption: -------------------------------" << endl;
+    cout << "------------------------------------------------------------------------------------------------" << endl;
     cout << "1: Encryption_(Substituion cipher): " << endl;
-    cout << "2: decryption_(Substituion cipher): " << endl;
-    cout << "3: Encryption_(Key cipher)"      << endl;
-    cout << "4: Decryption_(Key cipher)"      << endl;
-    cout << "5: exit: "                            << endl;
-
-
-    cout << "Enter the choice " << endl;
+    cout << "2: Decryption_(Substituion cipher): " << endl;
+    cout << "3: Encryption_(Key cipher):" << endl;
+    cout << "4: Decryption_(Key cipher):" << endl;
+    cout << "5: exit: " << endl;
+    //A substitution cipher replaces any plain text character from a given fixed set of characters with another character from the same set based on a key.
+    //Key cipher locks (encrypts) data so that only someone with the right key can unlock (decrypt) it. The original data is known as the plaintext, and the data after the key encrypts it is known as the ciphertext.
+    cout << ":::::::::::::::::::::::::::::::::" << endl;
+    cout << "::::::::Enter the choice:::::::::" << endl;
+    cout << ":::::::::::::::::::::::::::::::::" << endl;
     cin >> choice ;
 
     if(choice >= 1 && choice <= 5) {
@@ -183,7 +185,7 @@ int main() {
 
                 temp = new Cipher_numeric();
                 
-                cout << "enter the number:" << endl;
+                cout << "Enter the number:" << endl;
                 cin >> num;
 
                 num = temp -> encrypt (num);
@@ -202,7 +204,7 @@ int main() {
 
                 temp = new Cipher_numeric();
                 
-                cout << "enter the number:" << endl;
+                cout << "Enter the number:" << endl;
                 cin >> num;
 
                 num = temp -> decrypt(num);
@@ -236,7 +238,7 @@ int main() {
 
             case 4: {
 
-                cout << "enter the number: " << endl;
+                cout << "Enter the number: " << endl;
                 cin >> num;
 
                 cout << "Enter the key:" << endl;
@@ -264,7 +266,7 @@ int main() {
 
         }
 
-        cout << "Do you want to continue encrypting/decrypting? (Y)es or (n)o." << endl;
+        cout << "Do you want to continue encrypting/decrypting? (Y)es or (N)o." << endl;
         cin >> key;
 
         if(key == "N" || key == "n") {
