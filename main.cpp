@@ -151,7 +151,7 @@ int mainMenu() {
     }
     else {
 
-        cout << "Enter proper choice.";
+        cout << "Enter proper choice."<<endl;
 
         mainMenu();
 
@@ -268,7 +268,7 @@ int main() {
 
         cout << "Do you want to continue encrypting/decrypting? (Y)es or (N)o." << endl;
         cin >> key;
-
+        cout <<endl;
         if(key == "N" || key == "n") {
 
             cout << "Exiting program..." << endl;
